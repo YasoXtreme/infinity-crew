@@ -1,0 +1,8 @@
+.earth-3d {
+    position: absolute;
+    margin: 0px;
+    right: -25%;
+    top: 10%;
+    z-index: -1;
+
+}

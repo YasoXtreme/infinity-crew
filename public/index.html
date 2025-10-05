@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Nasa space app</title>
+    <link rel="stylesheet" href="Styles/General-styles.css" />
+    <link rel="stylesheet" href="Styles/Form-Style.css" />
+    <link rel="stylesheet" href="Styles/menu-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="form-management.js" defer></script>
+  </head>
+  <body style="margin-top: 0px; background-image: url(3.png)">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="container">
+      <div class="navbar">
+      <div class="nav-item">
+        <a href="/" style="color: white; text-decoration: none">Home</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="about.html" style="color: white; text-decoration: none"
+          >About</a
+        >
+      </div>
+    </div>
+      </div>
+      <div class="paragraph">
+        <h1 class="h1">Want to know the weather in any place at any time?</h1>
+        <h2 class="h2">Just choose the country and date in the cloud below.</h2>
+      </div>
+
+      <div class="form-background">
+        <div style="margin: 10px" display="block">
+          <label for="city" class="form-text" style="margin-right: 2px"
+            >City:</label
+          >
+          <div style="position: relative; bottom: 3px; display: inline-block">
+            <input
+              type="text"
+              id="city"
+              class="input-text"
+              placeholder
+              required
+              name="city"
+            />
+          </div>
+        </div>
+
+        <div style="margin: 10px; display: block">
+          <label
+            for="date"
+            class="form-text"
+            style="margin-left: 25px; margin-right: 20px"
+            >Date:</label
+          >
+          <div
+            style="
+              position: relative;
+              right: 10px;
+              bottom: 7px;
+              display: inline-block;
+            "
+          >
+            <input
+              type="date"
+              id="date"
+              class="input-text"
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <button class="submit-button" id="submit-button">
+            OK
+          </button>
+            <img src="loading.gif" id="loading">
+        </div>
+      </div>
+
+      <spline-viewer
+        class="earth-3d"
+        url="https://prod.spline.design/I8CqGOV68Wf-Osil/scene.splinecode"
+      ></spline-viewer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.10.57/build/spline-viewer.js"
+    ></script>
+  </body>
+</html>

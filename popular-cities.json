@@ -1,0 +1,957 @@
+{
+  "tokyo": {
+    "latitude": 35.6895,
+    "longitude": 139.6917,
+    "elevation": 40
+  },
+  "delhi": {
+    "latitude": 28.7041,
+    "longitude": 77.1025,
+    "elevation": 216
+  },
+  "shanghai": {
+    "latitude": 31.2304,
+    "longitude": 121.4737,
+    "elevation": 4
+  },
+  "sao paulo": {
+    "latitude": -23.5505,
+    "longitude": -46.6333,
+    "elevation": 760
+  },
+  "mumbai": {
+    "latitude": 19.076,
+    "longitude": 72.8777,
+    "elevation": 14
+  },
+  "mexico city": {
+    "latitude": 19.4326,
+    "longitude": -99.1332,
+    "elevation": 2240
+  },
+  "beijing": {
+    "latitude": 39.9042,
+    "longitude": 116.4074,
+    "elevation": 43
+  },
+  "osaka": {
+    "latitude": 34.6937,
+    "longitude": 135.5023,
+    "elevation": 12
+  },
+  "cairo": {
+    "latitude": 30.0444,
+    "longitude": 31.2357,
+    "elevation": 23
+  },
+  "new york": {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "elevation": 10
+  },
+  "dhaka": {
+    "latitude": 23.8103,
+    "longitude": 90.4125,
+    "elevation": 4
+  },
+  "karachi": {
+    "latitude": 24.8607,
+    "longitude": 67.0011,
+    "elevation": 8
+  },
+  "buenos aires": {
+    "latitude": -34.6037,
+    "longitude": -58.3816,
+    "elevation": 25
+  },
+  "kolkata": {
+    "latitude": 22.5726,
+    "longitude": 88.3639,
+    "elevation": 9
+  },
+  "istanbul": {
+    "latitude": 41.0082,
+    "longitude": 28.9784,
+    "elevation": 39
+  },
+  "chongqing": {
+    "latitude": 29.563,
+    "longitude": 106.5516,
+    "elevation": 244
+  },
+  "lagos": {
+    "latitude": 6.5244,
+    "longitude": 3.3792,
+    "elevation": 41
+  },
+  "manila": {
+    "latitude": 14.5995,
+    "longitude": 120.9842,
+    "elevation": 16
+  },
+  "rio de janeiro": {
+    "latitude": -22.9068,
+    "longitude": -43.1729,
+    "elevation": 6
+  },
+  "tianjin": {
+    "latitude": 39.0842,
+    "longitude": 117.2008,
+    "elevation": 4
+  },
+  "kinshasa": {
+    "latitude": -4.4419,
+    "longitude": 15.2663,
+    "elevation": 240
+  },
+  "guangzhou": {
+    "latitude": 23.1291,
+    "longitude": 113.2644,
+    "elevation": 21
+  },
+  "los angeles": {
+    "latitude": 34.0522,
+    "longitude": -118.2437,
+    "elevation": 93
+  },
+  "moscow": {
+    "latitude": 55.7558,
+    "longitude": 37.6173,
+    "elevation": 156
+  },
+  "shenzhen": {
+    "latitude": 22.5431,
+    "longitude": 114.0579,
+    "elevation": 18
+  },
+  "lahore": {
+    "latitude": 31.5204,
+    "longitude": 74.3587,
+    "elevation": 217
+  },
+  "bangalore": {
+    "latitude": 12.9716,
+    "longitude": 77.5946,
+    "elevation": 920
+  },
+  "paris": {
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "elevation": 35
+  },
+  "bogota": {
+    "latitude": 4.711,
+    "longitude": -74.0721,
+    "elevation": 2640
+  },
+  "jakarta": {
+    "latitude": -6.2088,
+    "longitude": 106.8456,
+    "elevation": 8
+  },
+  "chennai": {
+    "latitude": 13.0827,
+    "longitude": 80.2707,
+    "elevation": 6
+  },
+  "lima": {
+    "latitude": -12.0464,
+    "longitude": -77.0428,
+    "elevation": 154
+  },
+  "bangkok": {
+    "latitude": 13.7563,
+    "longitude": 100.5018,
+    "elevation": 1
+  },
+  "seoul": {
+    "latitude": 37.5665,
+    "longitude": 126.978,
+    "elevation": 38
+  },
+  "nagoya": {
+    "latitude": 35.1815,
+    "longitude": 136.9066,
+    "elevation": 15
+  },
+  "hyderabad": {
+    "latitude": 17.385,
+    "longitude": 78.4867,
+    "elevation": 542
+  },
+  "london": {
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "elevation": 11
+  },
+  "tehran": {
+    "latitude": 35.6892,
+    "longitude": 51.389,
+    "elevation": 1189
+  },
+  "chicago": {
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "elevation": 181
+  },
+  "chengdu": {
+    "latitude": 30.5728,
+    "longitude": 104.0668,
+    "elevation": 500
+  },
+  "nanjing": {
+    "latitude": 32.0603,
+    "longitude": 118.7969,
+    "elevation": 20
+  },
+  "wuhan": {
+    "latitude": 30.5928,
+    "longitude": 114.3055,
+    "elevation": 37
+  },
+  "ho chi minh city": {
+    "latitude": 10.8231,
+    "longitude": 106.6297,
+    "elevation": 19
+  },
+  "luanda": {
+    "latitude": -8.8399,
+    "longitude": 13.2894,
+    "elevation": 6
+  },
+  "ahmedabad": {
+    "latitude": 23.0225,
+    "longitude": 72.5714,
+    "elevation": 53
+  },
+  "kuala lumpur": {
+    "latitude": 3.139,
+    "longitude": 101.6869,
+    "elevation": 22
+  },
+  "xi'an": {
+    "latitude": 34.3416,
+    "longitude": 108.9398,
+    "elevation": 412
+  },
+  "hong kong": {
+    "latitude": 22.3193,
+    "longitude": 114.1694,
+    "elevation": 28
+  },
+  "dongguan": {
+    "latitude": 23.0462,
+    "longitude": 113.7463,
+    "elevation": 10
+  },
+  "hangzhou": {
+    "latitude": 30.2741,
+    "longitude": 120.1551,
+    "elevation": 21
+  },
+  "foshan": {
+    "latitude": 23.0215,
+    "longitude": 113.1214,
+    "elevation": 15
+  },
+  "shenyang": {
+    "latitude": 41.8057,
+    "longitude": 123.4315,
+    "elevation": 50
+  },
+  "riyadh": {
+    "latitude": 24.7136,
+    "longitude": 46.6753,
+    "elevation": 612
+  },
+  "baghdad": {
+    "latitude": 33.3152,
+    "longitude": 44.3661,
+    "elevation": 41
+  },
+  "santiago": {
+    "latitude": -33.4489,
+    "longitude": -70.6693,
+    "elevation": 570
+  },
+  "surat": {
+    "latitude": 21.1702,
+    "longitude": 72.8311,
+    "elevation": 13
+  },
+  "madrid": {
+    "latitude": 40.4168,
+    "longitude": -3.7038,
+    "elevation": 667
+  },
+  "suzhou": {
+    "latitude": 31.2989,
+    "longitude": 120.5853,
+    "elevation": 3
+  },
+  "pune": {
+    "latitude": 18.5204,
+    "longitude": 73.8567,
+    "elevation": 560
+  },
+  "harbin": {
+    "latitude": 45.8038,
+    "longitude": 126.535,
+    "elevation": 150
+  },
+  "houston": {
+    "latitude": 29.7604,
+    "longitude": -95.3698,
+    "elevation": 25
+  },
+  "dallas": {
+    "latitude": 32.7767,
+    "longitude": -96.797,
+    "elevation": 131
+  },
+  "toronto": {
+    "latitude": 43.6532,
+    "longitude": -79.3832,
+    "elevation": 76
+  },
+  "dar es salaam": {
+    "latitude": -6.7924,
+    "longitude": 39.2083,
+    "elevation": 12
+  },
+  "miami": {
+    "latitude": 25.7617,
+    "longitude": -80.1918,
+    "elevation": 2
+  },
+  "belo horizonte": {
+    "latitude": -19.9167,
+    "longitude": -43.9345,
+    "elevation": 852
+  },
+  "singapore": {
+    "latitude": 1.3521,
+    "longitude": 103.8198,
+    "elevation": 15
+  },
+  "philadelphia": {
+    "latitude": 39.9526,
+    "longitude": -75.1652,
+    "elevation": 12
+  },
+  "atlanta": {
+    "latitude": 33.749,
+    "longitude": -84.388,
+    "elevation": 320
+  },
+  "fukuoka": {
+    "latitude": 33.5904,
+    "longitude": 130.4017,
+    "elevation": 2
+  },
+  "khartoum": {
+    "latitude": 15.5007,
+    "longitude": 32.5599,
+    "elevation": 381
+  },
+  "barcelona": {
+    "latitude": 41.3851,
+    "longitude": 2.1734,
+    "elevation": 12
+  },
+  "saint petersburg": {
+    "latitude": 59.9311,
+    "longitude": 30.3609,
+    "elevation": 3
+  },
+  "abidjan": {
+    "latitude": 5.3599,
+    "longitude": -4.0083,
+    "elevation": 18
+  },
+  "guadalajara": {
+    "latitude": 20.6597,
+    "longitude": -103.3496,
+    "elevation": 1566
+  },
+  "ankara": {
+    "latitude": 39.9334,
+    "longitude": 32.8597,
+    "elevation": 938
+  },
+  "qingdao": {
+    "latitude": 36.0671,
+    "longitude": 120.3826,
+    "elevation": 23
+  },
+  "dalian": {
+    "latitude": 38.914,
+    "longitude": 121.6147,
+    "elevation": 29
+  },
+  "washington, d.c.": {
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "elevation": 125
+  },
+  "jiddah": {
+    "latitude": 21.4858,
+    "longitude": 39.1925,
+    "elevation": 12
+  },
+  "zhengzhou": {
+    "latitude": 34.7466,
+    "longitude": 113.6254,
+    "elevation": 110
+  },
+  "cawnpore": {
+    "latitude": 26.4499,
+    "longitude": 80.3319,
+    "elevation": 126
+  },
+  "casablanca": {
+    "latitude": 33.5731,
+    "longitude": -7.5898,
+    "elevation": 27
+  },
+  "alexandria": {
+    "latitude": 31.2001,
+    "longitude": 29.9187,
+    "elevation": 5
+  },
+  "jinan": {
+    "latitude": 36.6512,
+    "longitude": 117.1205,
+    "elevation": 24
+  },
+  "wenzhou": {
+    "latitude": 27.9943,
+    "longitude": 120.6994,
+    "elevation": 1
+  },
+  "monterrey": {
+    "latitude": 25.6866,
+    "longitude": -100.3161,
+    "elevation": 540
+  },
+  "nairobi": {
+    "latitude": -1.2921,
+    "longitude": 36.8219,
+    "elevation": 1661
+  },
+  "medellin": {
+    "latitude": 6.2476,
+    "longitude": -75.5658,
+    "elevation": 1495
+  },
+  "accra": {
+    "latitude": 5.6037,
+    "longitude": -0.187,
+    "elevation": 61
+  },
+  "cape town": {
+    "latitude": -33.9249,
+    "longitude": 18.4241,
+    "elevation": 25
+  },
+  "recife": {
+    "latitude": -8.0476,
+    "longitude": -34.877,
+    "elevation": 4
+  },
+  "salvador": {
+    "latitude": -12.9777,
+    "longitude": -38.5016,
+    "elevation": 8
+  },
+  "brasilia": {
+    "latitude": -15.8267,
+    "longitude": -47.9218,
+    "elevation": 1172
+  },
+  "fortaleza": {
+    "latitude": -3.7319,
+    "longitude": -38.5267,
+    "elevation": 21
+  },
+  "curitiba": {
+    "latitude": -25.4284,
+    "longitude": -49.2733,
+    "elevation": 935
+  },
+  "rome": {
+    "latitude": 41.9028,
+    "longitude": 12.4964,
+    "elevation": 21
+  },
+  "berlin": {
+    "latitude": 52.52,
+    "longitude": 13.405,
+    "elevation": 34
+  },
+  "hanoi": {
+    "latitude": 21.0278,
+    "longitude": 105.8342,
+    "elevation": 15
+  },
+  "athens": {
+    "latitude": 37.9838,
+    "longitude": 23.7275,
+    "elevation": 150
+  },
+  "sydney": {
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "elevation": 3
+  },
+  "melbourne": {
+    "latitude": -37.8136,
+    "longitude": 144.9631,
+    "elevation": 31
+  },
+  "kabul": {
+    "latitude": 34.5553,
+    "longitude": 69.2075,
+    "elevation": 1790
+  },
+  "montreal": {
+    "latitude": 45.5017,
+    "longitude": -73.5673,
+    "elevation": 30
+  },
+  "busan": {
+    "latitude": 35.1796,
+    "longitude": 129.0756,
+    "elevation": 2
+  },
+  "baku": {
+    "latitude": 40.4093,
+    "longitude": 49.8671,
+    "elevation": -28
+  },
+  "addis ababa": {
+    "latitude": 9.0192,
+    "longitude": 38.7525,
+    "elevation": 2355
+  },
+  "jaipur": {
+    "latitude": 26.9124,
+    "longitude": 75.7873,
+    "elevation": 431
+  },
+  "kuwait city": {
+    "latitude": 29.3759,
+    "longitude": 47.9774,
+    "elevation": 14
+  },
+  "nanchang": {
+    "latitude": 28.6836,
+    "longitude": 115.8307,
+    "elevation": 25
+  },
+  "taiyuan": {
+    "latitude": 37.8706,
+    "longitude": 112.551,
+    "elevation": 800
+  },
+  "kunming": {
+    "latitude": 25.0422,
+    "longitude": 102.7061,
+    "elevation": 1892
+  },
+  "changsha": {
+    "latitude": 28.2282,
+    "longitude": 112.9389,
+    "elevation": 63
+  },
+  "xiamen": {
+    "latitude": 24.4798,
+    "longitude": 118.0894,
+    "elevation": 2
+  },
+  "hefei": {
+    "latitude": 31.8206,
+    "longitude": 117.2272,
+    "elevation": 29
+  },
+  "fuzhou": {
+    "latitude": 26.0745,
+    "longitude": 119.2965,
+    "elevation": 10
+  },
+  "shijiazhuang": {
+    "latitude": 38.0428,
+    "longitude": 114.5149,
+    "elevation": 81
+  },
+  "ürümqi": {
+    "latitude": 43.8256,
+    "longitude": 87.6168,
+    "elevation": 800
+  },
+  "giza": {
+    "latitude": 29.987,
+    "longitude": 31.2118,
+    "elevation": 19
+  },
+  "lucknow": {
+    "latitude": 26.8467,
+    "longitude": 80.9462,
+    "elevation": 123
+  },
+  "indore": {
+    "latitude": 22.7196,
+    "longitude": 75.8577,
+    "elevation": 553
+  },
+  "bhopal": {
+    "latitude": 23.2599,
+    "longitude": 77.4126,
+    "elevation": 527
+  },
+  "patna": {
+    "latitude": 25.5941,
+    "longitude": 85.1376,
+    "elevation": 58
+  },
+  "nagpur": {
+    "latitude": 21.1458,
+    "longitude": 79.0882,
+    "elevation": 310
+  },
+  "thane": {
+    "latitude": 19.2183,
+    "longitude": 72.9781,
+    "elevation": 7
+  },
+  "pimpri-chinchwad": {
+    "latitude": 18.6277,
+    "longitude": 73.8009,
+    "elevation": 570
+  },
+  "vadodara": {
+    "latitude": 22.3072,
+    "longitude": 73.1812,
+    "elevation": 39
+  },
+  "ghaziabad": {
+    "latitude": 28.6692,
+    "longitude": 77.4538,
+    "elevation": 214
+  },
+  "ludhiana": {
+    "latitude": 30.901,
+    "longitude": 75.8573,
+    "elevation": 244
+  },
+  "agra": {
+    "latitude": 27.1767,
+    "longitude": 78.0081,
+    "elevation": 171
+  },
+  "nashik": {
+    "latitude": 19.9975,
+    "longitude": 73.7898,
+    "elevation": 584
+  },
+  "faridabad": {
+    "latitude": 28.4089,
+    "longitude": 77.3178,
+    "elevation": 198
+  },
+  "meerut": {
+    "latitude": 28.9845,
+    "longitude": 77.7064,
+    "elevation": 225
+  },
+  "rajkot": {
+    "latitude": 22.3039,
+    "longitude": 70.8022,
+    "elevation": 128
+  },
+  "kalyan-dombivali": {
+    "latitude": 19.2367,
+    "longitude": 73.1326,
+    "elevation": 12
+  },
+  "vasai-virar": {
+    "latitude": 19.3833,
+    "longitude": 72.8,
+    "elevation": 11
+  },
+  "varanasi": {
+    "latitude": 25.3176,
+    "longitude": 82.9739,
+    "elevation": 81
+  },
+  "srinagar": {
+    "latitude": 34.0837,
+    "longitude": 74.7973,
+    "elevation": 1585
+  },
+  "aurangabad": {
+    "latitude": 19.8762,
+    "longitude": 75.3433,
+    "elevation": 568
+  },
+  "dhanbad": {
+    "latitude": 23.7957,
+    "longitude": 86.4304,
+    "elevation": 222
+  },
+  "amritsar": {
+    "latitude": 31.634,
+    "longitude": 74.8723,
+    "elevation": 234
+  },
+  "navi mumbai": {
+    "latitude": 19.033,
+    "longitude": 73.0297,
+    "elevation": 7
+  },
+  "allahabad": {
+    "latitude": 25.4358,
+    "longitude": 81.8463,
+    "elevation": 98
+  },
+  "ranchi": {
+    "latitude": 23.3441,
+    "longitude": 85.3096,
+    "elevation": 651
+  },
+  "haora": {
+    "latitude": 22.5958,
+    "longitude": 88.2636,
+    "elevation": 12
+  },
+  "coimbatore": {
+    "latitude": 11.0168,
+    "longitude": 76.9558,
+    "elevation": 432
+  },
+  "jabalpur": {
+    "latitude": 23.1815,
+    "longitude": 79.9864,
+    "elevation": 411
+  },
+  "gwalior": {
+    "latitude": 26.2183,
+    "longitude": 78.1828,
+    "elevation": 211
+  },
+  "vijayawada": {
+    "latitude": 16.5062,
+    "longitude": 80.648,
+    "elevation": 23
+  },
+  "jodhpur": {
+    "latitude": 26.2389,
+    "longitude": 73.0243,
+    "elevation": 231
+  },
+  "madurai": {
+    "latitude": 9.9252,
+    "longitude": 78.1198,
+    "elevation": 147
+  },
+  "raipur": {
+    "latitude": 21.2514,
+    "longitude": 81.6296,
+    "elevation": 298
+  },
+  "kota": {
+    "latitude": 25.2138,
+    "longitude": 75.8648,
+    "elevation": 271
+  },
+  "guwahati": {
+    "latitude": 26.1445,
+    "longitude": 91.7362,
+    "elevation": 51
+  },
+  "chandigarh": {
+    "latitude": 30.7333,
+    "longitude": 76.7794,
+    "elevation": 321
+  },
+  "solapur": {
+    "latitude": 17.6599,
+    "longitude": 75.9064,
+    "elevation": 458
+  },
+  "hubli-dharwad": {
+    "latitude": 15.3647,
+    "longitude": 75.124,
+    "elevation": 670
+  },
+  "bareilly": {
+    "latitude": 28.367,
+    "longitude": 79.4304,
+    "elevation": 166
+  },
+  "moradabad": {
+    "latitude": 28.8386,
+    "longitude": 78.7733,
+    "elevation": 194
+  },
+  "mysore": {
+    "latitude": 12.2958,
+    "longitude": 76.6394,
+    "elevation": 770
+  },
+  "gurgaon": {
+    "latitude": 28.4595,
+    "longitude": 77.0266,
+    "elevation": 217
+  },
+  "aligarh": {
+    "latitude": 27.8974,
+    "longitude": 78.088,
+    "elevation": 178
+  },
+  "jalandhar": {
+    "latitude": 31.326,
+    "longitude": 75.5762,
+    "elevation": 228
+  },
+  "tiruchirappalli": {
+    "latitude": 10.7905,
+    "longitude": 78.7047,
+    "elevation": 88
+  },
+  "bhubaneswar": {
+    "latitude": 20.2961,
+    "longitude": 85.8245,
+    "elevation": 45
+  },
+  "salem": {
+    "latitude": 11.6643,
+    "longitude": 78.146,
+    "elevation": 278
+  },
+  "mira-bhayandar": {
+    "latitude": 19.2833,
+    "longitude": 72.8667,
+    "elevation": 9
+  },
+  "warangal": {
+    "latitude": 17.9689,
+    "longitude": 79.5941,
+    "elevation": 272
+  },
+  "thiruvananthapuram": {
+    "latitude": 8.5241,
+    "longitude": 76.9366,
+    "elevation": 10
+  },
+  "guntur": {
+    "latitude": 16.3067,
+    "longitude": 80.4365,
+    "elevation": 33
+  },
+  "bhiwandi": {
+    "latitude": 19.2967,
+    "longitude": 73.0631,
+    "elevation": 24
+  },
+  "saharanpur": {
+    "latitude": 29.9749,
+    "longitude": 77.5453,
+    "elevation": 269
+  },
+  "gorakhpur": {
+    "latitude": 26.757,
+    "longitude": 83.3669,
+    "elevation": 84
+  },
+  "bikaner": {
+    "latitude": 28.0229,
+    "longitude": 73.3119,
+    "elevation": 242
+  },
+  "amravati": {
+    "latitude": 20.9374,
+    "longitude": 77.7796,
+    "elevation": 343
+  },
+  "noida": {
+    "latitude": 28.5355,
+    "longitude": 77.391,
+    "elevation": 200
+  },
+  "jamshedpur": {
+    "latitude": 22.8046,
+    "longitude": 86.2029,
+    "elevation": 135
+  },
+  "bhilai": {
+    "latitude": 21.2132,
+    "longitude": 81.3831,
+    "elevation": 297
+  },
+  "cuttack": {
+    "latitude": 20.4625,
+    "longitude": 85.883,
+    "elevation": 36
+  },
+  "firozabad": {
+    "latitude": 27.159,
+    "longitude": 78.414,
+    "elevation": 164
+  },
+  "kochi": {
+    "latitude": 9.9312,
+    "longitude": 76.2673,
+    "elevation": 0
+  },
+  "bhavnagar": {
+    "latitude": 21.7645,
+    "longitude": 72.1519,
+    "elevation": 24
+  },
+  "dehradun": {
+    "latitude": 30.3165,
+    "longitude": 78.0322,
+    "elevation": 447
+  },
+  "durgapur": {
+    "latitude": 23.5204,
+    "longitude": 87.3119,
+    "elevation": 65
+  },
+  "asansol": {
+    "latitude": 23.6833,
+    "longitude": 86.9667,
+    "elevation": 100
+  },
+  "nanded": {
+    "latitude": 19.1383,
+    "longitude": 77.3204,
+    "elevation": 366
+  },
+  "kolhapur": {
+    "latitude": 16.705,
+    "longitude": 74.2433,
+    "elevation": 564
+  },
+  "ajmer": {
+    "latitude": 26.4499,
+    "longitude": 74.6399,
+    "elevation": 486
+  },
+  "gulbarga": {
+    "latitude": 17.3297,
+    "longitude": 76.8343,
+    "elevation": 454
+  },
+  "jamnagar": {
+    "latitude": 22.4707,
+    "longitude": 70.0577,
+    "elevation": 20
+  },
+  "wellington": {
+    "latitude": -41.29,
+    "longitude": 174.78,
+    "elevation": 10
+  }
+}

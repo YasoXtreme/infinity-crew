@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles/weather-style.css" />
+    <link rel="stylesheet" href="Styles/main-style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div class="stars-layer" id="starsLayer"></div>
+    <div class="nebula"></div>
+
+    <div class="navbar">
+      <div class="nav-item">
+        <a href="/" style="color: white; text-decoration: none">Home</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="about.html" style="color: white; text-decoration: none"
+          >About</a
+        >
+      </div>
+    </div>
+
+    <div class="widget" id="widget">
+      <div class="weather">
+        <div class="weather-text" id="weatherText">Sunny</div>
+        <div class="icon-large" id="icon">🌤️</div>
+      </div>
+
+      <div class="card pink" onclick="makeHistoryModal()">
+        <div class="emoji">📄</div>
+        <div>
+          <h4>History</h4>
+          <p>Click to learn more</p>
+        </div>
+      </div>
+
+      <div class="card orange" onclick="makeAdviceModal()">
+        <div class="emoji">💡</div>
+        <div>
+          <h4>Advice</h4>
+          <p>Click for personalized advice</p>
+        </div>
+      </div>
+
+      <div class="card blue" onclick="makeReport()">
+        <div class="emoji">🌟</div>
+        <div>
+          <h4>Report</h4>
+          <p>Click to read a detailed report</p>
+        </div>
+      </div>
+
+      <div class="clock" id="clock"></div>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="box">
+        <h2 id="modalTitle"></h2>
+        <p id="modalBody"></p>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <!--Normal weather-->
+    <img
+      src="backgrounds of the weather page/Normal/hot_ground.png"
+      style="bottom: -30px"
+      class="Ground"
+      id="ground-normal"
+    />
+    <img
+      src="backgrounds of the weather page/Normal/hot_clouds.svg"
+      class="clouds"
+      id="cloud1"
+    />
+    <img
+      src="backgrounds of the weather page/Normal/hot_clouds.svg"
+      class="clouds"
+      id="cloud2"
+    />
+    <img
+      src="backgrounds of the weather page/Normal/hot_clouds.svg"
+      class="clouds"
+      id="cloud3"
+    />
+    <img
+      src="backgrounds of the weather page/Normal/hot_clouds.svg"
+      class="clouds"
+      id="cloud5"
+    />
+    <img
+      src="backgrounds of the weather page/Normal/hot_sun.png"
+      id="sun-normal"
+    />
+    <!--cold weather-->
+    <img
+      src="backgrounds of the weather page/Cold/Night sky.png"
+      id="night-sky-cold"
+    />
+    <img
+      src="backgrounds of the weather page/Cold/Ground.png"
+      class="Ground"
+      id="ground-cold"
+    />
+    <!--cold/rainy weather-->
+    <img
+      src="backgrounds of the weather page/Cold_Rainy/Night Sky.png"
+      id="night-sky-cold-rainy"
+    />
+    <img
+      src="backgrounds of the weather page/Cold_Rainy/Ground.png"
+      class="Ground"
+      id="ground-cold-rainy"
+    />
+    <img
+      src="backgrounds of the weather page/Cold_Rainy/Snow.png"
+      class="snow"
+      id="snow1"
+    />
+    <img
+      src="backgrounds of the weather page/Cold_Rainy/Snow.png"
+      class="snow"
+      id="snow2"
+    />
+    <img
+      src="backgrounds of the weather page/Cold_Rainy/Snow.png"
+      class="snow"
+      id="snow3"
+    />
+    <img
+      src="backgrounds of the weather page/Cold_Rainy/Snow.png"
+      class="snow"
+      id="snow4"
+    />
+    <img
+      src="backgrounds of the weather page/Cold_Rainy/Snow.png"
+      class="snow"
+      id="snow5"
+    />
+    <img
+      src="backgrounds of the weather page/Cold_Rainy/Snow.png"
+      class="snow"
+      id="snow6"
+    />
+    <!--hot weather-->
+    <img
+      src="backgrounds of the weather page/Hot/Background.png"
+      id="hot-background"
+    />
+    <img src="backgrounds of the weather page/Hot/Boat.png" id="boat" />
+    <img src="backgrounds of the weather page/Hot/Ship.png" id="ship" />
+    <img
+      src="backgrounds of the weather page/Hot/Thermometer.png"
+      id="thermo"
+    />
+    <img src="backgrounds of the weather page/Hot/hot_sun.png" id="sun-hot" />
+    <!--rainy weather-->
+    <img
+      src="backgrounds of the weather page/Rainy/rainy background.png"
+      alt=""
+      id="rainy-background"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Clouds.png"
+      class="rainy-clouds"
+      id="rainy-clouds1"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Clouds.png"
+      class="rainy-clouds"
+      id="rainy-clouds2"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain1"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain2"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain3"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain4"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain5"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain6"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain7"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain8"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain9"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain10"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain11"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain12"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain13"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain14"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain15"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain16"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain17"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain18"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain19"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Rain.png"
+      class="rain"
+      id="rain20"
+    />
+    <img
+      src="backgrounds of the weather page/Rainy/Ground.png"
+      class="Ground"
+      id="ground-rainy"
+    />
+    <!--hot & cold weather-->
+    <img
+      src="backgrounds of the weather page/Hot_Cold/Ground.png"
+      class="Ground"
+      id="hot-cold-ground"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/Night Sky.png"
+      id="night-sky"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/hot_sun.png"
+      id="sun-hot-cold"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/Hot Thermometer.png"
+      id="thermometer-hot"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/Cold Thermometer.png"
+      id="thermometer-cold"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/Moon.png"
+      id="moon-hot-cold"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/hot_clouds.svg"
+      class="clouds"
+      id="cloud-hot-cold1"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/hot_clouds.svg"
+      class="clouds"
+      id="cloud-hot-cold2"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/hot_clouds.svg"
+      class="clouds"
+      id="cloud-hot-cold3"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/hot_clouds.svg"
+      class="clouds"
+      id="cloud-hot-cold4"
+    />
+    <img
+      src="backgrounds of the weather page/Hot_Cold/hot_clouds.svg"
+      class="clouds"
+      id="cloud-hot-cold5"
+    />
+    <!-- windy weather-->
+    <div class="scene">
+      <img
+        src="backgrounds of the weather page/Windy/Cap.gif"
+        class="cup"
+        alt="كوب"
+      />
+      <img
+        src="backgrounds of the weather page/Windy/Person.gif"
+        class="character"
+        alt="شخصية"
+      />
+      <img
+        src="backgrounds of the weather page/Windy/Tree 1.gif"
+        class="tree left"
+        alt="شجرة"
+      />
+      <img
+        src="backgrounds of the weather page/Windy/Tree 2.gif"
+        class="tree right"
+        alt="شجرة"
+      />
+      <img
+        src="backgrounds of the weather page/Windy/Leaves.png"
+        class="leaf"
+        alt="كومة ورق"
+      />
+      <img
+        src="backgrounds of the weather page/Windy/Ground.png"
+        class="ground"
+        alt="خلفية"
+        id="windy-ground"
+      />
+    </div>
+
+    <!-- Uncomfortable-->
+    <img
+      src="backgrounds of the weather page/Uncomfortable/photo_2025-09-26_17-56-08.jpg"
+      id="Uncomfortable"
+      alt="خلفية"
+    />
+
+    <script src="script.js"></script>
+  </body>
+</html>

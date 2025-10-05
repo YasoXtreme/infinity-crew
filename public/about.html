@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Page</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #1a1f5c, #2c3b82, #5a4da3, #8a63c9);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px;
+      }
+
+      .about-container {
+        width: 100%;
+        max-width: 900px;
+        text-align: center;
+      }
+
+      /* Floating animation */
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      /* --- App Description Section --- */
+      .app-description {
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 50px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        animation: float 4s ease-in-out infinite;
+      }
+      .app-description h1 {
+        margin-bottom: 15px;
+        font-size: 28px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+      .app-description p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #ddd;
+        margin-bottom: 12px;
+      }
+
+      /* --- Team Grid --- */
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 30px;
+      }
+
+      .member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        animation: float 5s ease-in-out infinite;
+      }
+
+      .circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid white;
+        overflow: hidden; /* ensures image stays inside circle */
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      }
+
+      .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* crops image nicely */
+      }
+
+      .member-name {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about-container">
+      <!-- App description first -->
+      <div class="app-description">
+        <h1>About Our App</h1>
+        <p>
+          It not only tells you the conditions, but also gives you smart advice
+          based on the weather — so you can plan your day with confidence.
+        </p>
+        <p>
+          Whether you have an important meeting, a trip, or just want to know if
+          you’ll need an umbrella, the app helps you stay prepared.
+        </p>
+        <p>
+          By combining real-time updates with easy-to-read insights, it makes
+          weather prediction more useful and practical for your everyday life.
+        </p>
+      </div>
+
+      <!-- Team Section -->
+      <h2>Meet the Team</h2>
+      <div class="team-grid">
+        <div class="member">
+          <div class="circle">
+            <img src="profiles/Arwa.jpeg" alt="Arwa Aboelez" />
+          </div>
+          <div class="member-name">Arwa Aboelez</div>
+        </div>
+        <div class="member">
+          <div class="circle">
+            <img src="profiles/Saja.jpeg" alt="Saga Ibrahim" />
+          </div>
+          <div class="member-name">Saga Ibrahim</div>
+        </div>
+        <div class="member">
+          <div class="circle">
+            <img src="profiles/Yassen.jpeg" alt="Yassen Mohamed" />
+          </div>
+          <div class="member-name">Yassen Mohamed</div>
+        </div>
+        <div class="member">
+          <div class="circle">
+            <img src="profiles/Jomana.jpeg" alt="Jomana Mohamed" />
+          </div>
+          <div class="member-name">Jomana Mohamed</div>
+        </div>
+        <div class="member">
+          <div class="circle">
+            <img src="profiles/Fares.jpeg" alt="Fares Hassan" />
+          </div>
+          <div class="member-name">Fares Hassan</div>
+        </div>
+        <div class="member">
+          <div class="circle">
+            <img src="profiles/Mariam.jpeg" alt="Mariam Elnouby" />
+          </div>
+          <div class="member-name">Mariam Elnouby</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- Stars Layer -->
+<div class="stars"></div>
+
+<style>
+  /* Stars Background */
+  .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite alternate;
+  }
+
+  @keyframes twinkle {
+    from {
+      opacity: 0.2;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  // Generate random stars
+  const starsContainer = document.querySelector(".stars");
+  for (let i = 0; i < 80; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.animationDuration = 1 + Math.random() * 3 + "s";
+    starsContainer.appendChild(star);
+  }
+</script>

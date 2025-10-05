@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Analysis Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-trendline@3.1.1/dist/chartjs-plugin-trendline.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f9;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      .chart-container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      /* 1. Bar Chart container to make it wide and short */
+      .bar-chart-container {
+        width: 90%;
+        height: 80vh; /* Set height to 60% of viewport height */
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      /* Style for the individual line charts */
+      .line-chart-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .line-chart-container {
+        width: 45%; /* Two charts per row */
+        margin: 10px;
+      }
+
+      #barChart {
+        width: 80%;
+        height: 80%;
+      }
+
+      /* Style for the report container */
+      .report-container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Data Analysis Dashboard</h1>
+
+    <div class="bar-chart-container">
+      <h2 id="barChartTitle">Latest Year's Likelihoods (Bar Chart)</h2>
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <hr />
+
+    <h2>
+      Weather Likelihood Trend Over 25 Years (Line Charts with Trendline
+      Projection)
+    </h2>
+    <div class="line-chart-group" id="lineChartGroup">
+      <p id="loadingMessage"">Loading data... (please wait)</p>
+    </div>
+
+    <hr />
+
+    <h2>Weather Analysis Report</h2>
+    <div class="report-container" id="reportContainer">
+      <p id="reportLoadingMessage">Generating report...</p>
+    </div>
+
+    <script>
+      // New labels based on the 'likelihoods' object keys
+      const LABELS = [
+        "Very Hot",
+        "Very Cold",
+        "Very Uncomfortable",
+        "Very Wet",
+        "Very Windy",
+      ];
+
+      /**
+       * Fetches data from the /multi-year-predict endpoint.
+       * Retrieves city and date from localStorage and sorts the results by year.
+       * @returns {Promise<Array>} The sorted array of data dictionaries.
+       */
+      async function fetchData() {
+        // Use 25 as the required number of years
+        const years = 25;
+        // Get city and date from localStorage, using fallbacks if not found
+        const city = localStorage.getItem("city") || "Cairo";
+        const date = localStorage.getItem("date") || "2025-10-04";
+
+        const apiUrl = `/multi-year-predict?city=${encodeURIComponent(
+          city
+        )}&years=${years}&date=${encodeURIComponent(date)}`;
+
+        try {
+          const response = await fetch(apiUrl);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.json();
+
+          // Sort the data by year ascending (oldest to newest) for proper trend visualization
+          const sortedData = data.results.sort((a, b) => a.year - b.year);
+
+          return sortedData;
+        } catch (error) {
+          console.error("Could not fetch data:", error);
+          // Update the dashboard to reflect the error
+          document.getElementById("barChartTitle").innerText =
+            "Data Fetch Error";
+          document.getElementById("lineChartGroup").innerHTML =
+            "<h2>Could not load data. Check console for error.</h2>";
+          return [];
+        }
+      }
+
+      /**
+       * Creates the bar chart for the most recent year's likelihood data.
+       * @param {Array} dataDict - The sorted array of data dictionaries.
+       */
+      function createBarChart(dataDict) {
+        if (dataDict == {}) {
+          document.getElementById("barChart").parentElement.innerHTML =
+            "<h2>No data available for the Bar Chart.</h2>";
+          return;
+        }
+
+        // The last element is the latest year after sorting by year ascending
+        const likelihoods = dataDict.likelihoods;
+        // Map the new LABELS to the values in the likelihoods object
+        const dataValues = LABELS.map((key) => likelihoods[key] || 0);
+        const year = dataDict.date.split("-")[0];
+
+        // Update the main title above the chart
+        document.getElementById(
+          "barChartTitle"
+        ).innerText = `Likelihoods for ${dataDict.city} on ${dataDict.date}`;
+
+        new Chart(document.getElementById("barChart"), {
+          type: "bar",
+          data: {
+            labels: LABELS,
+            datasets: [
+              {
+                // Set the label to reflect the specific year and city
+                label: `Data for ${dataDict.city}, Year ${year}`,
+                data: dataValues,
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.6)", // Very Hot
+                  "rgba(54, 162, 235, 0.6)", // Very Cold
+                  "rgba(255, 206, 86, 0.6)", // Very Uncomfortable
+                  "rgba(75, 192, 192, 0.6)", // Very Wet
+                  "rgba(153, 102, 255, 0.6)", // Very Windy
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            responsive: false,
+            maintainAspectRatio: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: "Likelihood Value (%)", // Updated Y-axis title
+                },
+              },
+              x: {
+                title: {
+                  display: true,
+                  text: "Weather Condition", // Added X-axis title
+                },
+              },
+            },
+            plugins: {
+              legend: {
+                display: false, // Hide legend as it's a single dataset
+              },
+            },
+          },
+        });
+      }
+
+      /**
+       * Creates line charts for each likelihood type showing trend over all years.
+       * @param {Array} dataDict - The sorted array of data dictionaries.
+       */
+      function createLineCharts(dataDict, storedData) {
+        document.getElementById("loadingMessage").style.display = "none";
+        if (dataDict.length === 0) {
+          // Error handling is done in fetchData, but kept for consistency
+          return;
+        }
+
+        storedData.year = storedData.date.split("-")[0];
+        dataDict[dataDict.length - 1] = storedData;
+
+        const chartGroup = document.getElementById("lineChartGroup");
+        // Clear any existing content or previous error messages
+        chartGroup.innerHTML = "";
+
+        // Use year for x-axis labels
+        const basePeriodLabels = dataDict.map((d) => d.year);
+        // Add an empty string for the projection point on the trendline
+        const projectionLabels = [...basePeriodLabels, ""];
+
+        const firstYear = dataDict[0].year;
+        const lastYear = dataDict[dataDict.length - 1].year;
+
+        LABELS.forEach((key) => {
+          const container = document.createElement("div");
+          container.className = "line-chart-container";
+
+          const canvas = document.createElement("canvas");
+          canvas.id = `lineChart-${key}`;
+          container.appendChild(canvas);
+          chartGroup.appendChild(container);
+
+          // Extract the specific likelihood value for the current key for all years
+          const dataPoints = dataDict.map((d) => d.likelihoods[key] || 0);
+
+          const colorMap = {
+            "Very Hot": "rgb(255, 99, 132)",
+            "Very Cold": "rgb(54, 162, 235)",
+            "Very Uncomfortable": "rgb(255, 206, 86)",
+            "Very Wet": "rgb(75, 192, 192)",
+            "Very Windy": "rgb(153, 102, 255)",
+          };
+          const primaryColor = colorMap[key];
+
+          new Chart(canvas, {
+            type: "line",
+            data: {
+              // Use the year labels including the extra empty label for the projection point
+              labels: projectionLabels,
+              datasets: [
+                {
+                  label: key,
+                  data: dataPoints,
+                  borderColor: primaryColor,
+                  backgroundColor: primaryColor + "40",
+                  tension: 0.1,
+                  fill: false,
+                  pointRadius: 3,
+
+                  // Configure the trendline projection
+                  trendlineLinear: {
+                    color: "rgba(0, 0, 0, 0.7)",
+                    lineStyle: "dashed",
+                    width: 2,
+                    projection: true, // Project the trendline one period ahead
+                  },
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  // Update title to be year-based
+                  text: `${key} Likelihood Trend (${firstYear}-${lastYear})`,
+                },
+                legend: {
+                  display: false, // Hide legend
+                },
+              },
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: "Year", // Updated X-axis title
+                  },
+                },
+                y: {
+                  beginAtZero: true, // Likelihoods should start at 0%
+                  title: {
+                    display: true,
+                    text: "Likelihood Value (%)", // Updated Y-axis title
+                  },
+                },
+              },
+            },
+          });
+        });
+      }
+
+      /**
+       * Fetches a report based on the weather data and displays it.
+       * @param {Array} weatherData - The combined historical and new weather data.
+       */
+      async function fetchAndDisplayReport(weatherData) {
+        const reportContainer = document.getElementById("reportContainer");
+        try {
+          // Encode the data to be sent as a URL parameter
+          const dataParam = encodeURIComponent(JSON.stringify(weatherData));
+          const reportUrl = `/get-report?data=${dataParam}`;
+
+          const response = await fetch(reportUrl);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          // Assuming the report is returned as HTML/text
+          const reportHtml = await response.text();
+          reportContainer.innerHTML = reportHtml;
+        } catch (error) {
+          console.error("Could not fetch report:", error);
+          reportContainer.innerHTML =
+            "<h2>Could not load the report. Please try again later.</h2>";
+        }
+      }
+
+      // --- STEP 4: Initialize Charts ---
+      document.addEventListener("DOMContentLoaded", async () => {
+        // Set dummy localStorage values for demonstration if they don't exist
+        if (!localStorage.getItem("city")) {
+          console.log(
+            "Setting default city and date in localStorage for demonstration."
+          );
+          localStorage.setItem("city", "Cairo");
+          localStorage.setItem("date", "2025-10-04");
+        }
+
+        const storedData = JSON.parse(localStorage.getItem("ai-data"));
+        createBarChart(storedData);
+        const data = await fetchData();
+        createLineCharts(data, storedData);
+
+        // After creating charts, fetch and display the report
+        await fetchAndDisplayReport(data);
+      });
+    </script>
+  </body>
+</html>

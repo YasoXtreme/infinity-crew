@@ -1,0 +1,230 @@
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 12;
+  display: flex;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+.nav-item {
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.18s, color 0.18s;
+}
+.nav-item:hover {
+  transform: translateY(-3px);
+  color: #ffd966;
+}
+.container {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+}
+
+.earth-3d {
+  position: absolute;
+  margin: 0px;
+  z-index: -1;
+}
+
+.paragraph {
+  background-color: #7174db;
+  margin-top: 100px;
+  width: 700px;
+  height: auto;
+  border-radius: 200px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: left;
+  padding: 40px;
+  position: absolute;
+  left: 8%;
+  top: -12%;
+  text-align: left;
+  scale: 0.9;
+}
+
+.h1,
+h2 {
+  display: inline-block;
+  color: aliceblue;
+  font-family: "Comic Relief", system-ui;
+  line-height: 45px;
+  margin: 15px;
+}
+
+.h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.circle1 {
+  width: 45px;
+  height: 38px;
+  left: 58%;
+  top: 52%;
+  position: absolute;
+  background-color: #7174db;
+  opacity: 0.5;
+  border-radius: 50px;
+  z-index: 100;
+}
+
+.circle2 {
+  width: 45px;
+  height: 38px;
+  left: 57%;
+  bottom: 40%;
+  position: absolute;
+  background-color: #7174db;
+  opacity: 0.5;
+  border-radius: 50px;
+  z-index: 100;
+}
+#loading {
+  position: absolute;
+  left: 35%;
+  bottom: -5%;
+  display: none;
+}
+
+@media (max-width: 100000px) {
+  .circle1 {
+    left: 56%;
+  }
+
+  .circle2 {
+    left: 60%;
+  }
+  .form-background {
+    left: 10%;
+    bottom: 10%;
+    scale: 1.3;
+  }
+  .form-background:hover {
+    scale: 1.4;
+  }
+
+  .earth-3d {
+    scale: 1.2;
+    left: 30%;
+    top: 10%;
+  }
+  .paragraph {
+    scale: 1;
+    right: 10%;
+    top: 0%;
+  }
+}
+
+/*    Tablet      */
+@media (max-width: 1100px) {
+  body {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .menu-botton {
+    scale: 1;
+    margin-left: 30px;
+  }
+
+  .logo {
+    scale: 1;
+  }
+
+  .earth-3d {
+    scale: 0.9;
+    top: 0%;
+    left: 28%;
+  }
+
+  .paragraph {
+    left: -10%;
+    top: -10%;
+    scale: 0.6.8;
+  }
+
+  .form-background {
+    scale: 0.8;
+    bottom: 5%;
+  }
+
+  .form-background:hover {
+    scale: 0.9;
+  }
+
+  .circle1 {
+    position: absolute;
+    left: 44%;
+    top: 37%;
+  }
+
+  .circle2 {
+    position: absolute;
+    left: 50%;
+    top: 43%;
+  }
+}
+
+/*  phone  */
+@media (max-width: 768px) {
+  .paragraph {
+    scale: 0.47;
+    left: -30%;
+  }
+
+  .earth-3d {
+    scale: 0.7;
+    
+    left: 10%;
+  }
+
+  .circle1 {
+    scale: 0.5;
+    top: 31%;
+  }
+
+  .circle2 {
+    scale: 0.5;
+    top: 34%;
+  }
+
+  .form-background {
+    scale: 0.8;
+    position: center;
+    left: -1%;
+    right: -1%;
+    bottom: -1%;
+  }
+  .form-background:hover {
+    scale: 0.75;
+  }
+
+  .menu-botton {
+    scale: 1;
+    margin-left: 5px;
+  }
+}

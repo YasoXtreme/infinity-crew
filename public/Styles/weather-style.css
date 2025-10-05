@@ -1,0 +1,654 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #4d89fd, #7a9fff);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center, center;
+}
+
+.Ground {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.clouds {
+  position: absolute;
+  opacity: 0.8;
+  scale: 0.8;
+  animation-name: moveCloudsup, moveCloudsleft;
+  animation-iteration-count: infinite, infinite;
+  animation-timing-function: linear, linear;
+  animation-direction: alternate, normal;
+  animation-delay: 0s, 0s;
+}
+
+/* Normal weather background styles */
+
+#ground-normal {
+  display: none;
+}
+
+#cloud1 {
+  animation-duration: 1s, 75s;
+  top: 10%;
+  display: none;
+}
+
+#cloud2 {
+  animation-duration: 1.5s, 100s;
+  top: 15%;
+  display: none;
+}
+
+#cloud3 {
+  animation-duration: 1s, 125s;
+  top: 20%;
+  display: none;
+}
+#cloud6 {
+  animation-duration: 1.25, 150s;
+  top: 15%;
+  display: none;
+}
+#cloud5 {
+  animation-duration: 1.5s, 180s;
+  top: 10%;
+  display: none;
+}
+
+@keyframes moveCloudsup {
+  0% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes moveCloudsleft {
+  0% {
+    left: -65%;
+  }
+
+  100% {
+    left: 90%;
+  }
+}
+
+#sun-normal {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  scale: 0.9;
+  animation: rotateSun 20s linear infinite;
+  z-index: -1;
+  display: none;
+}
+
+/*cold weather background styles */
+#night-sky-cold {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+  display: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center, center;
+  animation: stars 3s infinite alternate;
+  display: none;
+}
+@keyframes stars {
+  0% {
+    scale: 101%;
+  }
+  100% {
+    scale: 104%;
+  }
+}
+#ground-cold {
+  display: none;
+}
+
+/* cold/rainy weather background */
+.snow {
+  position: absolute;
+  animation: fall linear infinite;
+  display: none;
+}
+
+@keyframes fall {
+  0% {
+    top: -250%;
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+#snow1 {
+  left: 0;
+  animation-duration: 6s;
+}
+
+#snow2 {
+  right: 0;
+  animation-duration: 6s;
+}
+
+#snow3 {
+  left: 0;
+  animation-duration: 5s;
+}
+
+#snow4 {
+  right: 0;
+  animation-duration: 5s;
+}
+#snow5 {
+  left: 0;
+  animation-duration: 7s;
+}
+#snow6 {
+  right: 0;
+  animation-duration: 7s;
+}
+
+#ground-cold-rainy {
+  display: none;
+}
+
+#night-sky-cold-rainy {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+  display: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center, center;
+  animation: stars 3s infinite alternate;
+  display: none;
+}
+
+/* Hot weather background styles */
+#hot-background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center, center;
+  display: none;
+}
+
+#thermo {
+  position: absolute;
+  top: -22%;
+  left: -11%;
+  scale: 0.3;
+  display: none;
+}
+
+#sun-hot {
+  position: absolute;
+  top: -20%;
+  right: -8%;
+  scale: 0.9;
+  animation: rotateSun 20s linear infinite;
+  z-index: -1;
+  animation: sun-hot 1s ease-in-out infinite alternate;
+  display: none;
+}
+
+@keyframes sun-hot {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  100% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+#ship {
+  position: absolute;
+  bottom: 38%;
+  left: 25%;
+  scale: 0.4;
+  animation: floatShip, moveship;
+  animation-duration: 4s, 60s;
+  animation-timing-function: ease-in-out, linear;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: alternate, normal;
+  z-index: -1;
+  display: none;
+}
+
+@keyframes floatShip {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveship {
+  0% {
+    left: -30%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+#boat {
+  position: absolute;
+  bottom: 35%;
+  left: 55%;
+  animation: floatShip, moveBoat;
+  animation-duration: 4s, 50s;
+  animation-timing-function: ease-in-out, linear;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: alternate, normal;
+  z-index: 1;
+  display: none;
+}
+
+@keyframes moveBoat {
+  0% {
+    left: 120%;
+  }
+  100% {
+    left: -30%;
+  }
+}
+
+/* rainy-weather background style */
+#rainy-background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center, center;
+  display: none;
+}
+
+#ground-rainy {
+  display: none;
+}
+
+.rainy-clouds {
+  position: absolute;
+  opacity: 0.9;
+  scale: 0.48;
+  display: none;
+}
+
+#rainy-clouds1 {
+  top: -22%;
+  left: -22%;
+}
+
+#rainy-clouds2 {
+  top: -22%;
+  right: -22%;
+}
+
+.rain {
+  position: absolute;
+  animation: fallRain linear infinite;
+  opacity: 0.6;
+  scale: 0.44;
+  top: -15%;
+  z-index: -1;
+  display: none;
+}
+
+#rain1 {
+  left: -18%;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+#rain2 {
+  right: -18%;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+#rain3 {
+  left: -18%;
+  animation-duration: 3.3s;
+  animation-delay: 0.5s;
+}
+
+#rain4 {
+  right: -18%;
+  animation-duration: 3.3s;
+  animation-delay: 0.5s;
+}
+
+#rain5 {
+  left: -18%;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+#rain6 {
+  right: -18%;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+#rain7 {
+  left: -18%;
+  animation-duration: 4s;
+  animation-delay: 1.5s;
+}
+
+#rain8 {
+  right: -18%;
+  animation-duration: 4s;
+  animation-delay: 1.5s;
+}
+
+#rain9 {
+  left: -18%;
+  animation-duration: 2.5s;
+  animation-delay: 2s;
+}
+
+#rain10 {
+  right: -18%;
+  animation-duration: 2.5s;
+  animation-delay: 2s;
+}
+
+#rain11 {
+  left: -18%;
+  animation-duration: 3s;
+  animation-delay: 2.5s;
+}
+
+#rain12 {
+  right: -18%;
+  animation-duration: 3s;
+  animation-delay: 2.5s;
+}
+
+#rain13 {
+  left: -18%;
+  animation-duration: 2s;
+  animation-delay: 3s;
+}
+
+#rain14 {
+  right: -18%;
+  animation-duration: 2s;
+  animation-delay: 3s;
+}
+
+#rain15 {
+  left: -18%;
+  animation-duration: 2s;
+  animation-delay: 3.5s;
+}
+
+#rain16 {
+  right: -18%;
+  animation-duration: 4.5s;
+  animation-delay: 3.5s;
+}
+
+#rain17 {
+  left: -18%;
+  animation-duration: 4.5s;
+  animation-delay: 4s;
+}
+
+#rain18 {
+  right: -18%;
+  animation-duration: 2s;
+  animation-delay: 4s;
+}
+
+#rain19 {
+  left: -18%;
+  animation-duration: 2s;
+  animation-delay: 4.5s;
+}
+
+#rain20 {
+  right: -18%;
+  animation-duration: 2s;
+  animation-delay: 4.5s;
+}
+@keyframes fallRain {
+  0% {
+    top: -15%;
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+/* hot/cold*/
+#hot-cold-ground {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  background-position: bottom;
+  display: none;
+}
+#sun-hot-cold {
+  position: absolute;
+  top: -27%;
+  left: -45%;
+  scale: 0.9;
+  animation: glowing 3s linear infinite alternate;
+  z-index: -1;
+  display: none;
+}
+
+@keyframes glowing {
+  0% {
+    transform: scale(0.85);
+    filter: brightness(1);
+  }
+  100% {
+    transform: scale(0.95);
+    filter: brightness(1.2);
+  }
+}
+
+#night-sky {
+  position: absolute;
+  bottom: 0;
+  left: 48.8%;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center, center;
+  display: none;
+}
+
+#thermometer-hot {
+  position: absolute;
+  top: -15%;
+  left: -5%;
+  scale: 0.3;
+  display: none;
+}
+
+#thermometer-cold {
+  position: absolute;
+  top: -13%;
+  right: -4%;
+  scale: 0.3;
+  display: none;
+}
+
+#moon-hot-cold {
+  position: absolute;
+  top: -20%;
+  right: -5%;
+  scale: 0.4;
+  animation: rotateMoon 30s linear infinite;
+  z-index: -1;
+  display: none;
+}
+
+#cloud-hot-cold1 {
+  animation-duration: 1s, 75s;
+  top: 10%;
+  size: 0.6;
+  display: none;
+}
+
+#cloud-hot-cold2 {
+  animation-duration: 1.5s, 100s;
+  top: 13%;
+  size: 0.6;
+  display: none;
+}
+
+#cloud-hot-cold3 {
+  animation-duration: 1s, 125s;
+  top: 15%;
+  size: 0.6;
+  display: none;
+}
+
+#cloud-hot-cold4 {
+  animation-duration: 1.5s, 180s;
+  top: 10%;
+  size: 0.6;
+  display: none;
+}
+
+#cloud-hot-cold5 {
+  animation-duration: 1.25, 150s;
+  top: 13%;
+  size: 0.6;
+  display: none;
+}
+
+/* windy */
+
+.scene {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+}
+
+#windy-ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+  display: none;
+}
+
+.cup {
+  z-index: 2;
+  bottom: 70px;
+  left: 60%;
+  position: absolute;
+  width: 280px;
+  display: none;
+}
+
+.character {
+  z-index: 3;
+  bottom: 40px;
+  right: 15%;
+  position: absolute;
+  width: 420px;
+  display: none;
+}
+
+.tree {
+  z-index: 2;
+  position: absolute;
+  bottom: 100px;
+  width: 320px;
+  display: none;
+}
+
+.tree.left {
+  left: 3%;
+  display: none;
+}
+
+.tree.right {
+  right: 3%;
+  display: none;
+}
+
+.leaf {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: moveRight 10s linear infinite;
+  opacity: 0.9;
+  display: none;
+}
+
+@keyframes moveRight {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* uncomfetable */
+#Uncomfortable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: none;
+}
