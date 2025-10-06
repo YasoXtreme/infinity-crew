@@ -24,8 +24,6 @@ git clone https://github.com/YasoXtreme/infinity-crew.git
 cd infinity-crew
 ```
 
-Note: Please replace your-username/your-repo-name.git with the actual URL of this repository.*
-
 **Step 2:** Install Dependencies
 This project uses both Python (for backend/data processing) and Node.js (for the server). Run the following combined command to install all necessary packages:
 
